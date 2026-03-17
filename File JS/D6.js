@@ -123,7 +123,7 @@ revealFooterLink();
        La tabella avrà 5 elementi e questa struttura: immagine, nome prodotto, quantità, prezzo
     */
 
-const generateTable = function () {
+/* const generateTable = function () {
   const data = [
     {
       image: "N/A",
@@ -181,7 +181,14 @@ const generateTable = function () {
   const tablePlace = document.getElementById("tableArea");
   tablePlace.appendChild(table);
 };
-generateTable();
+generateTable(); */
+
+const generateTable = function () {
+  const tableArea = document.createElement("table");
+  const table = document.getElementById("changeMyColor");
+  table.appendChild(tableArea);
+  
+};
 
 /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
@@ -199,4 +206,15 @@ const hideAllImages = function () {};
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-const changeColorWithRandom = function () {};
+const changeColorWithRandom = function () {
+  const h2Rainbow = document.getElementById("changeMyColor");
+  h2Rainbow.addEventListener("click", () => {
+    let x = Math.floor(Math.random() * 256);
+    let y = Math.floor(Math.random() * 256);
+    let z = Math.floor(Math.random() * 256);
+    let bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    console.log(bgColor);
+    h2Rainbow.style.color = bgColor;
+  });
+};
+changeColorWithRandom();
