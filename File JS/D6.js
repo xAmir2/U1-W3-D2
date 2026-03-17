@@ -230,22 +230,39 @@ const generateTable = function () {
   <td>12</td>
   </tr>
   </tbody>
-  <table/>
+  <table>
   `;
 };
-generateTable()
+generateTable();
 
 /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
     */
 
-const addRow = function () {};
+const addRow = function () {
+  const table = document.getElementsByTagName("table")[0];
+  table.innerHTML =
+    table.innerHTML +
+    `<tr>
+  <td><img width="50px" src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS6E2jdbkGHEiwzBJcU0GvUonvOIgSlEcdRY1C70Vb0signPgOQ2ZCfLOUlMm4OZWjz6w84NFjRJcwjmSG5f3FLsU0Cyev3-X4pCc3MGkXXTW8JmzoV-9CvtAY1HH6uqMMg_ZS-81s&usqp=CAc" alt"volleyball"></td>
+  <td>Volleyball</td>
+  <td>700</td>
+  <td>19</td>
+  </tr>`;
+};
+addRow();
 
 /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
 
-const hideAllImages = function () {};
+const hideAllImages = function () {
+  const images = document.querySelectorAll("#tableArea table img");
+  images.forEach((img) => {
+    img.style.display = "none";
+  });
+};
+hideAllImages();
 
 /* EXTRA ESERCIZIO 15
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
