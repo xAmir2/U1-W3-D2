@@ -185,10 +185,55 @@ generateTable(); */
 
 const generateTable = function () {
   const tableArea = document.createElement("table");
-  const table = document.getElementById("changeMyColor");
+  const table = document.getElementById("tableArea");
   table.appendChild(tableArea);
+  table.innerHTML = `
+  <table>
+  <thead>
+  <tr>
+  <th>Image</th>
+  <th>Product Name</th>
+  <th>Quantity</th>
+  <th>Price</th>
+  </tr>
   
+  </thead>
+  <tbody>
+  <tr>
+  <td><img width="50px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZA3EnMQLT0ousS1Nr-v-89d8cM_fbt2uMug&s" alt"basketball"></td>
+  <td>Basketball</td>
+  <td>40</td>
+  <td>10</td>
+  </tr>
+  <tr>
+  <td><img width="50px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Football_%28soccer_ball%29.svg/960px-Football_%28soccer_ball%29.svg.png" alt"footbal"></td>
+  <td>Football</td>
+  <td>90</td>
+  <td>15</td>
+  </tr>
+  <tr>
+  <td><img width="50px" src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSrZFVzNTB6Cb0_mief28XginLyrn_l4vmJ635TVkL8LfkPoNzSy96jq7Ky7wtne51MNq_PtTXwh5ftHlHsgv2ryj2PenfMTI2nsFB9LVEm1MlqQ23NywCY4TC1vEo6tkA7pWKMLf4&usqp=CAc" alt"golfball"></td>
+  <td>Golf ball</td>
+  <td>1000</td>
+  <td>5</td>
+  </tr>
+  <tr>
+  <td><img width="50px" src="https://makerbazar.in/cdn/shop/products/1ttball.jpg?v=1679558634" alt"pingpong"></td>
+  <td>Pingpong</td>
+  <td>800</td>
+  <td>3</td>
+  </tr>
+  <tr>
+  <td><img width="50px"src="https://i5.walmartimages.com/asr/d907e4b5-3bea-4f43-a20a-772448a443d7_2.ed2c3a70cd93f3633650740aabedcd0d.jpeg?odnHeight=768&odnWidth=768&odnBg=FFFFFF" alt"tennis ball"></td>
+  <td>Tennis ball</td>
+  <td>500</td>
+  <td>12</td>
+  </tr>
+  </tbody>
+  <table/>
+  `;
 };
+generateTable()
 
 /* ESERCIZIO 12
        Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
